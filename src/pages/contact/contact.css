@@ -1,0 +1,245 @@
+.contact{
+    position: relative;
+    width: 100%;
+    height: auto;
+    color: #f0f0f0;
+    padding: 110px 80px;
+    overflow: hidden;
+    background: rgba( 31, 31, 56, 0.25 );
+   -webkit-backdrop-filter: blur( 2px );
+    backdrop-filter: blur( 2px );
+
+    
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .contact .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+}
+
+
+
+.card-animation{
+    overflow: hidden;
+}
+
+.contact .cards{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 45% 50%;
+    gap: 5%;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+form{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 10px;
+    -o-border-radius: 1px;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    -ms-border-radius: 1px;
+    border-radius: 1px;
+    background: transparent;
+    border: 2px solid #4db5ff;
+    resize: none;
+    color: #f0f0f0;
+    font-size: 1.2em;
+    caret-color: #4db5ff;
+    -o-transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    transition: 0.5s ease;
+}
+
+textarea{
+    height: 150px;
+}
+
+textarea::-webkit-scrollbar{
+    display: none;
+}
+
+input:focus, textarea:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder{
+    font-family: 'Open Sans', sans-serif;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+}
+
+
+.input-container{
+    position: relative;
+}
+
+.input-container label{
+    position:absolute;
+	top: 0px;
+	left:0px;
+	font-size: 1rem;
+	color:#fff;	
+    pointer-events: none;
+	transition: all 0.5s ease-in-out;
+    padding: 10px;
+}
+
+.input-container input:focus ~ label,
+.input-container input:valid ~ label{
+	top:-10px;
+	font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+	
+}
+
+.input-container textarea:focus ~ label,
+.input-container textarea:valid ~ label{
+	top:-12px;
+	font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+	
+}
+
+
+
+
+
+
+.contact .right{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .right .message h6{
+    font-size: 1.5em;
+}
+
+.contact .right .hi, 
+.contact .socials-icons {
+    padding-top: 1rem;
+}
+
+.contact .right .hi h1, .socials-icons h1{
+    font-size: 1.5em;
+}
+
+
+
+.socials-icons ul, 
+.hi ul{
+    display: flex;
+}
+
+.socials-icons ul li, 
+.hi ul li{
+    display: inline-block;
+    position: relative;
+}
+
+.socials-icons ul li:not(:first-child), 
+.hi ul li:not(:first-child){
+    margin-left: 16px;
+}
+
+.socials-icons ul li a, 
+.hi ul li a{
+    display: inline-block;
+    color: #4db5ff;
+    font-size: 25px;
+    -o-transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    transition: 0.5s ease;
+}
+
+.hi ul li a{
+    font-size: 30px;
+}
+
+.socials-icons ul li a:hover, 
+.hi ul li a:hover{
+    color: rgb(77, 181, 255,0.6);
+}
+
+
+hr{
+    border: 0;
+    height: 0.1px;
+    background: rgb(77, 181, 255,0.5);
+    background-image: linear-gradient(to right, #4db5ff, #4db5ff, #4db5ff);
+}
+
+footer{
+    text-align: center;
+    position: relative;
+}
+
+footer p{
+    font-size: 1rem;
+    margin-top: 30px;
+}
+
+footer p span{
+    text-decoration: 2px underline #f0f0f0;
+    font-weight: 600;
+}
+
+
+
+@media (max-width: 1100px){
+    .contact{
+        padding: 110px 50px;
+    }
+}
+
+@media (max-width: 991px){
+    .contact{
+        padding: 110px 23px;
+    }
+}
+
+@media (max-width: 767px){
+    .contact .cards{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 1.6rem;
+    }
+}
+
+
+@media (max-width: 576px){
+    .contact .right .message h6{
+        font-size: 1.25em;
+        text-align: justify;
+    }
+    
+    .contact .right .hi h1, .socials-icons h1{
+        font-size: 1.25em;
+    }
+
+    footer p{
+        font-size: 14px;
+    }
+    
+    footer p span{
+        font-weight: 700;
+    }
+}
